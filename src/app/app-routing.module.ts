@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./routes/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
   },
   {
     path: 'register',
@@ -29,6 +29,14 @@ const routes: Routes = [
   {
     path: 'validate',
     loadChildren: () => import('./routes/common/validatecode/validate/validate.module').then( m => m.ValidatePageModule)
+  },
+  {
+    path: 'addLesson',
+    loadChildren: () => import('./routes/lessons/add-lesson/add-lesson.module').then( m => m.AddLessonPageModule)
+  },
+  {
+    path: 'joinLesson',
+    loadChildren: () => import('./routes/lessons/join-lesson/join-lesson.module').then( m => m.JoinLessonPageModule)
   }
 ];
 @NgModule({

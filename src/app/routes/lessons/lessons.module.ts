@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { LessonsPage } from './lessons.page';
 import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
 import { RouterModule } from '@angular/router';
+import { LoginPageModule } from '../login/login.module';
 
 @NgModule({
   imports: [
