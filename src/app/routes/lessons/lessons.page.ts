@@ -41,4 +41,8 @@ export class LessonsPage implements OnInit {
     await actionSheet.present();
   }
 
+  goDetail() {
+    this.router.navigateByUrl('lesson-detail-tabs');
+  }
+
 }

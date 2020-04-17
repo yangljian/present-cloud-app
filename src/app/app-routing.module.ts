@@ -1,19 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { MaxLengthValidator } from '@angular/forms';
 
 const routes: Routes = [
-  {
-    path: 'lessons',
-    loadChildren: () => import('./routes/lessons/lessons.module').then( m => m.LessonsPageModule)
-  },
-  {
-    path: 'discover',
-    loadChildren: () => import('./routes/discover/discover.module').then( m => m.DiscoverPageModule)
-  },
-  {
-    path: 'mine',
-    loadChildren: () => import('./routes/mine/mine.module').then( m => m.MinePageModule)
-  },
   {
     path: 'welcome',
     loadChildren: () => import('./routes/welcome/welcome.module').then( m => m.WelcomePageModule)
@@ -37,6 +26,21 @@ const routes: Routes = [
   {
     path: 'joinLesson',
     loadChildren: () => import('./routes/lessons/join-lesson/join-lesson.module').then( m => m.JoinLessonPageModule)
+  },
+  {
+    path: 'lesson-detail-tabs',
+    loadChildren: () => import('./routes/lessons/lesson-detail-tab/lesson-detail-tab.module').then( m => m.LessonDetailTabPageModule)
+  },
+  {
+    path: 'addHomework',
+    // tslint:disable-next-line:max-line-length
+    loadChildren: () => import('./routes/lessons/lesson-detail-tab/homework/add-homework/add-homework.module').then( m => m.AddHomeworkPageModule)
+  }
+  ,
+  {
+    path: 'score',
+    // tslint:disable-next-line:max-line-length
+    loadChildren: () => import('./routes/lessons/lesson-detail-tab/homework/homework-detail/score/score.module').then( m => m.ScorePageModule)
   }
 ];
 @NgModule({
