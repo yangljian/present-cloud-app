@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +13,18 @@ export class LoginPage implements OnInit {
   };
   isPass = '';
   stuInf: any;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  login() {
+    this.router.navigateByUrl('register');
+  }
+  nextStep() {
+    this.router.navigateByUrl('validateCode');
+  }
+  register() {
+    this.router.navigateByUrl('validateCode');
+  }
 }

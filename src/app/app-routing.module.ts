@@ -16,6 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./routes/register/register.module').then( m => m.RegisterPageModule)
   },
   {
+    path: 'validateCode',
+    loadChildren: () => import('./routes/common/validatecode/validate/validate.module').then( m => m.ValidatePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./routes/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
     path: 'validate',
     loadChildren: () => import('./routes/common/validatecode/validate/validate.module').then( m => m.ValidatePageModule)
   },

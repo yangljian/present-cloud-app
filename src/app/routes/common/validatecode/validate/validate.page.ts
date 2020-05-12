@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-validate',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./validate.page.scss'],
 })
 export class ValidatePage implements OnInit {
-
-  constructor() { }
+  @ViewChild(IonSlides, {static: false})
+  slides: IonSlides;
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+  login() {
+    this.router.navigateByUrl('register');
+  }
+
+  getCode() {
+    this.slides.slideNext();
   }
 
 }
