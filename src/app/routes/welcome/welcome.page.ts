@@ -19,7 +19,8 @@ export class WelcomePage implements OnInit {
   @ViewChild(IonSlides, {static: false})
   slides: IonSlides;
 
-  constructor(private router: Router, private localStorageService: LocalStorageService, private navCtrl: NavController) {
+  constructor(private router: Router,
+              private localStorageService: LocalStorageService, private navCtrl: NavController) {
    }
 
   ngOnInit() {
@@ -63,10 +64,10 @@ export class WelcomePage implements OnInit {
   }
 
   onSkip() {
-    this.router.navigateByUrl('login');
+    this.navCtrl.navigateForward('login');
   }
   onClick() {
-    this.router.navigateByUrl('login');
-    // this.navCtrl.navigateForward('login');
+    // this.router.navigateByUrl('login');
+    this.navCtrl.navigateForward('login');
   }
 }
