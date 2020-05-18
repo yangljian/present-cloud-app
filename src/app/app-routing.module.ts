@@ -49,6 +49,38 @@ const routes: Routes = [
     path: 'score',
     // tslint:disable-next-line:max-line-length
     loadChildren: () => import('./routes/lessons/lesson-detail-tab/homework/homework-detail/score/score.module').then( m => m.ScorePageModule)
+  },  
+  {
+    path: 'mine',
+    loadChildren: () => import('./routes/mine/mine.module').then( m => m.MinePageModule)
+  }, 
+  {
+    path: 'change-mine',
+    loadChildren: () => import('./routes/mine/change-mine/change-mine.module').then( m => m.ChangeMinePageModule)
+  },
+  {
+    path: 'about-the-software-mine',
+    loadChildren: () => import('./routes/mine/about-the-software-mine/about-the-software-mine.module').then( m => m.AboutTheSoftwareMinePageModule)
+  },
+  {
+    path: 'setting-mine',
+    loadChildren: () => import('./routes/mine/setting-mine/setting-mine.module').then( m => m.SettingMinePageModule)
+  },
+  {
+    path: 'about-us-setting-mine',
+    loadChildren: () => import('./routes/mine/setting-mine/about-us-setting-mine/about-us-setting-mine.module').then( m => m.AboutUsSettingMinePageModule)
+  },
+  {
+    path: 'informatino-feedback-setting-mine',
+    loadChildren: () => import('./routes/mine/setting-mine/informatino-feedback-setting-mine/informatino-feedback-setting-mine.module').then( m => m.InformatinoFeedbackSettingMinePageModule)
+  },
+  {
+    path: 'version-setting-mine',
+    loadChildren: () => import('./routes/mine/setting-mine/version-setting-mine/version-setting-mine.module').then( m => m.VersionSettingMinePageModule)
+  },
+  {
+    path: 'user-agreement-mine',
+    loadChildren: () => import('./routes/mine/user-agreement-mine/user-agreement-mine.module').then( m => m.UserAgreementMinePageModule)
   }
 ];
 @NgModule({
