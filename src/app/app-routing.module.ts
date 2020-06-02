@@ -4,8 +4,17 @@ import { MaxLengthValidator } from '@angular/forms';
 
 const routes: Routes = [
   {
+    path: 'curriculumCirclePage',
+    loadChildren: () => import('./routes/discover/curriculum-circle/curriculum-circle.module').then( m => m.CurriculumCirclePageModule)
+  },
+  {
     path: 'signup',
     loadChildren: () => import('./routes/lessons/lesson-detail-tab/member/sign-in/sign-in.module').then( m => m.SignInPageModule)
+  },
+  {
+    path: 'signupDetail',
+    // tslint:disable-next-line:max-line-length
+    loadChildren: () => import('./routes/lessons/lesson-detail-tab/member/signup-detail/signup-detail.module').then( m => m.SignupDetailPageModule)
   },
   {
     path: 'welcome',

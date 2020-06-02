@@ -16,4 +16,8 @@ export class MemberPage implements OnInit {
   signup() {
     this.router.navigateByUrl('signup');
   }
+
+  goDetail() {
+    this.router.navigateByUrl('signupDetail');
+  }
 }
