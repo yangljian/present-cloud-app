@@ -4,6 +4,10 @@ import { MaxLengthValidator } from '@angular/forms';
 
 const routes: Routes = [
   {
+    path: 'signup',
+    loadChildren: () => import('./routes/lessons/lesson-detail-tab/member/sign-in/sign-in.module').then( m => m.SignInPageModule)
+  },
+  {
     path: 'welcome',
     loadChildren: () => import('./routes/welcome/welcome.module').then( m => m.WelcomePageModule)
   },
